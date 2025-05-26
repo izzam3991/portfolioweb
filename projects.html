@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Certifications</title>
+  <link rel="stylesheet" href="CSS/LinkColor.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .active {
+    border-bottom: 2px solid #3B82F6; /* Tailwind's blue-500 */
+    text-shadow: 0 0 2px rgb(0, 0, 0);
+    font-weight: 700;
+    }
+
+    .notactive {
+    color: grey;
+    }
+
+    a:visited {
+    color: inherit;
+  }
+
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #ffffff;
+    }
+
+    .tab {
+      padding: 0.5rem 0.5rem;
+      text-decoration: none;
+      color: #000066;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.3s, background-color 0.3s;
+      white-space: nowrap; 
+      opacity: 0.8;
+    }
+
+    .tab:hover {
+      background-color: #f0f0f0;
+    }
+
+    .tab.active {
+      text-shadow: 0 0 10px white;
+      background-color: #678c8f;
+      border-bottom: 3px solid #000066; /* Underline for active tab */
+      opacity: 1;
+    }
+
+  .tab-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .header-top-row {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .header1-welcoming {
+    width: 90%;
+    color: blue;
+    text-shadow: 0 0 80PX black;
+    font-size: clamp(1rem, 1.6vw, 1.6rem);
+    white-space: pre-wrap;
+  }
+
+  .header2-contactme {
+    width: 90%;
+    justify-content: space-between;
+  }
+
+
+   .header3{
+      background-image: url("images/box3.gif");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 7.5rem;
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 9998;
+    }
+
+    .header3 h1 {
+      color: blue;
+      font-size: 1.6rem;
+      text-align: center;
+      padding-top: 1rem;
+      text-shadow: 0 0 5px #ffffff;
+    }
+
+    .header3  p{
+      color: blue;
+      font-size: 1.3rem;
+      text-align: center;
+      padding-top: 1rem;
+      text-shadow: 0 0 5px #ffffff;
+    }
+
+    .header3-selection {
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+      height: 2.5rem;
+      position: sticky;
+      top: 7.5rem;
+      z-index: 9998;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .header3-selection nav{
+      justify-content: center;
+      gap: 0;
+    }
+
+    .header3-selection a {
+      text-align: center;
+      width: 9rem;
+    }
+
+    .text-shadow-white {
+  text-shadow: 0 0 10px white;
+}
+
+    @media (min-width: 1440px) {
+    .header-top-row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+    }
+
+
+    .header1-welcoming {
+    width: 50%;
+    padding-left: 10%;
+    color: blue;
+    text-shadow: 0 0 80PX black;
+    }
+
+    .header2-contactme {
+    width: 50%;
+    text-align: right;
+    padding-right: 10%;
+    }
+    
+    .header3{
+    height: 12rem;
+    width: 96%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 1rem;
+    }
+
+    .header3 h1 {
+    font-size: 3.2rem;
+    }
+
+    .header3 p {
+    font-size: 1.6rem;
+    }
+
+    .header3-selection {
+    width: 96%;
+    position: sticky;
+    top: 11.5rem;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center; 
+    }
+
+    .header3-selection nav {
+    gap: 16rem;
+    }
+
+    .header3-selection a {
+    width: 14rem;
+    }
+      
+    }
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-gradient-x {
+  background-size: 300% 300%;
+  animation: gradient-x 5s ease infinite;
+} 
+
+</style>
+</head>
+
+<body>
+
+      <div class="header-top-row">
+    <div class="header1-welcoming">Welcome    |    Selamat Datang    |    환영합니다</div>
+    <div class="header2-contactme">
+      <nav>
+        <a href="#">Contact Me</a>
+        <a style="color: #db1414;" href="#">Language</a>
+      </nav>
+  </div>
+  </div>
+  <div class="header3">
+    <h1>Mohamad Izzam bin Samsudin</h1>
+    <p>Certified. Skilled. Cloud-Focused</p>
+  </div>
+
+  <div class="header3-selection">
+    <nav class="tab-container">
+      <a href="Homepage.html" class="notactive">About Me</a>
+      <a href="Certifications.html" class="notactive">Certifications</a>
+      <a href="projects.html" class="active">Projects</a>
+    </nav>
+  </div>
+
+  <section class="bg-white py-12 px-5 md:px-20" id="azure-static-project">
+  <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
+    🌐 Azure Static Website with CI/CD & Visitor Counter
+  </h2>
+
+  <div class="bg-gray-100 rounded-2xl shadow-lg p-8 md:p-12 space-y-6">
+    <p class="text-gray-700 text-lg leading-relaxed">
+      This project showcases a <strong>fully static website hosted on Azure Blob Storage</strong> with <strong>automated deployment via GitHub Actions</strong> and a real-time <strong>visitor counter using Azure Functions and Cosmos DB</strong>.
+    </p>
+
+    <ul class="list-disc list-inside text-gray-700 text-base md:text-lg space-y-2">
+      <li>⚡ Hosted on Azure Blob Storage with Static Website Hosting</li>
+      <li>🔐 Integrated with Azure CDN for HTTPS and global delivery</li>
+      <li>🔄 CI/CD pipeline using GitHub Actions</li>
+      <li>📈 Real-time visitor counter powered by Azure Functions & Cosmos DB</li>
+      <li>📱 Mobile-friendly layout with responsive design</li>
+    </ul>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+      <a href="https://your-web-url.azureedge.net" target="_blank"
+         class="inline-flex items-center justify-center bg-blue-600 text-white text-sm font-semibold px-5 py-3 rounded-lg shadow hover:bg-blue-700 transition">
+        🌐 Live Demo
+      </a>
+
+      <a href="https://github.com/your-username/azure-static-site" target="_blank"
+         class="inline-flex items-center justify-center bg-gray-800 text-white text-sm font-semibold px-5 py-3 rounded-lg shadow hover:bg-gray-900 transition">
+        💻 View on GitHub
+      </a>
+    </div>
+
+    <div class="pt-6">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">What I Learned:</h3>
+      <ul class="list-disc list-inside text-gray-700 space-y-1">
+        <li>Azure Blob Static Hosting configuration</li>
+        <li>Automating deployments with GitHub Actions</li>
+        <li>Creating serverless APIs using Azure Functions</li>
+        <li>Storing and retrieving data from Cosmos DB</li>
+        <li>Securing traffic and improving performance with Azure CDN</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+</body>
