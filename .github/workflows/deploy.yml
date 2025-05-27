@@ -17,12 +17,11 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Upload to Azure Blob
-        uses: azure/cli@v1
-        with:
-          inlineScript: |
-            az storage blob upload-batch \
-              --account-name i33amweb \
-              --destination \$web \
-              --source . \
-              --overwrite
+           - name: Upload to Azure Blob
+              run: |
+                az storage blob upload-batch \
+                 --account-name ${{ secrets.i33amweb }} \
+                 --destination \$web \
+                 --source . \
+                 --auth-mode login \
+                 --overwrite
