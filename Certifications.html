@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Certifications</title>
+  <link rel="stylesheet" href="CSS/LinkColor.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .active {
+    border-bottom: 2px solid #3B82F6; /* Tailwind's blue-500 */
+    text-shadow: 0 0 2px rgb(0, 0, 0);
+    font-weight: 700;
+    }
+
+    .notactive {
+    color: grey;
+    }
+
+    a:visited {
+    color: inherit;
+  }
+
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #ffffff;
+    }
+
+    .tab {
+      padding: 0.5rem 0.5rem;
+      text-decoration: none;
+      color: #000066;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.3s, background-color 0.3s;
+      white-space: nowrap; 
+      opacity: 0.8;
+    }
+
+    .tab:hover {
+      background-color: #f0f0f0;
+    }
+
+    .tab.active {
+      text-shadow: 0 0 10px white;
+      background-color: #678c8f;
+      border-bottom: 3px solid #000066; /* Underline for active tab */
+      opacity: 1;
+    }
+
+  .tab-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .header-top-row {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .header1-welcoming {
+    width: 90%;
+    color: blue;
+    text-shadow: 0 0 80PX black;
+    font-size: clamp(1rem, 1.6vw, 1.6rem);
+    white-space: pre-wrap;
+  }
+
+  .header2-contactme {
+    width: 90%;
+    justify-content: space-between;
+  }
+
+
+   .header3{
+      background-image: url("Images/box3.gif");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 7.5rem;
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 9998;
+    }
+
+    .header3 h1 {
+      color: blue;
+      font-size: 1.6rem;
+      text-align: center;
+      padding-top: 1rem;
+      text-shadow: 0 0 5px #ffffff;
+    }
+
+    .header3  p{
+      color: blue;
+      font-size: 1.3rem;
+      text-align: center;
+      padding-top: 1rem;
+      text-shadow: 0 0 5px #ffffff;
+    }
+
+    .header3-selection {
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+      height: 2.5rem;
+      position: sticky;
+      top: 7.5rem;
+      z-index: 9998;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .header3-selection nav{
+      justify-content: center;
+      gap: 0;
+    }
+
+    .header3-selection a {
+      text-align: center;
+      width: 9rem;
+    }
+
+    .text-shadow-white {
+  text-shadow: 0 0 10px white;
+}
+
+    @media (min-width: 1440px) {
+    .header-top-row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+    }
+
+
+    .header1-welcoming {
+    width: 50%;
+    padding-left: 10%;
+    color: blue;
+    text-shadow: 0 0 80PX black;
+    }
+
+    .header2-contactme {
+    width: 50%;
+    text-align: right;
+    padding-right: 10%;
+    }
+    
+    .header3{
+    height: 12rem;
+    width: 96%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 1rem;
+    }
+
+    .header3 h1 {
+    font-size: 3.2rem;
+    }
+
+    .header3 p {
+    font-size: 1.6rem;
+    }
+
+    .header3-selection {
+    width: 96%;
+    position: sticky;
+    top: 11.5rem;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center; 
+    }
+
+    .header3-selection nav {
+    gap: 16rem;
+    }
+
+    .header3-selection a {
+    width: 14rem;
+    }
+      
+    }
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-gradient-x {
+  background-size: 300% 300%;
+  animation: gradient-x 5s ease infinite;
+} 
+
+</style>
+</head>
+<body>
+  <div class="header-top-row">
+    <div class="header1-welcoming">Welcome    |    Selamat Datang    |    환영합니다</div>
+    <div class="header2-contactme">
+      <nav>
+        <a href="#">Contact Me</a>
+        <a style="color: #db1414;" href="#">Language</a>
+      </nav>
+  </div>
+  </div>
+  <div class="header3">
+    <h1>Mohamad Izzam bin Samsudin</h1>
+    <p>Certified. Skilled. Cloud-Focused</p>
+  </div>
+
+  <div class="header3-selection">
+    <nav class="tab-container">
+      <a href="Homepage.html" class="notactive">About Me</a>
+      <a href="Certifications.html" class="active">Certifications</a>
+      <a href="projects.html" class="notactive">Projects</a>
+    </nav>
+  </div>
+
+<section class="bg-gradient-to-r from-blue-200 via-blue-400 to-blue-800 animate-gradient-x py-10 px-5 md:px-20" id="certifications">
+  <h2 class="text-3xl font-bold text-center text-gray-800 mb-10 text-shadow-white">Proven Cloud Expertise with Official Credentials</h2>
+
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+    <!-- AZ-104 Certification Card -->
+    <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://learn.microsoft.com/media/learn/certification/badges/microsoft-certified-associate-badge.svg?branch=main" alt="AZ-104 Badge" class="w-20 h-20" />
+        <div>
+          <h3 class="text-xl font-semibold text-blue-700">Microsoft Certified: Azure Administrator Associate</h3>
+          <p class="text-sm text-gray-500">Issued: May 2024 · Expires: May 2026</p>
+        </div>
+      </div>
+
+      <p class="text-gray-700 mb-3 text-sm">
+        Skilled in managing and improving Azure cloud systems to keep them secure, scalable, and cost-effective for business needs.
+      </p>
+
+      <ul class="list-disc list-inside text-gray-600 text-sm mb-3">
+        <li>Configured Azure VMs and virtual networks</li>
+        <li>Implemented RBAC and Entra ID policies</li>
+        <li>Managed storage accounts with ARM templates</li>
+        <li>Automated resource deployment using Azure PowerShell & CLI.</li>
+      </ul>
+
+      <p class="text-sm text-gray-600 italic mb-2">
+        🛠 Ready to apply skills in:
+        <ul class="text-sm text-gray-600 italic mb-2">
+          <li>- Monitored and optimized cloud resources to reduce operational costs.</li>
+          <li>- Set up MFA across Azure environments to enhance security.</li>
+        </ul>
+      </p>
+
+      <div class="flex justify-center space-x-4">
+        <a href="https://learn.microsoft.com/api/credentials/share/en-us/MohamadIzzam-3174/10B1704B3D582EA0?sharingId=D882A1A827C20213" target="_blank" class="bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow hover:bg-blue-700 hover:text-white transition">
+    🔗 Verify Certification
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Empty Certification Card Template 1 -->
+    <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://learn.microsoft.com/media/learn/certification/badges/microsoft-certified-associate-badge.svg?branch=main" alt="AZ-500 Badge" class="w-20 h-20" />
+        <div>
+          <h3 class="text-xl font-semibold text-blue-700">Microsoft Certified: Azure Security Engineer Associate</h3>
+          <p class="text-sm text-gray-500">Issued: July 2024 · Expires: July 2026</p>
+        </div>
+      </div>
+
+      <p class="text-gray-700 mb-3 text-sm">
+        Experienced in protecting Azure cloud resources by setting up strong security for users, networks, and data following best practices.
+      </p>
+
+      <ul class="list-disc list-inside text-gray-600 text-sm mb-3">
+       <li>Configured Microsoft Defender for Cloud and Sentinel</li>
+       <li>Managed Entra ID identity protection and conditional access</li>
+       <li>Implemented network security groups, firewalls, and private endpoints</li>
+       <li>Configured key vaults, RBAC, and managed identities</li>
+      </ul>
+
+      <p class="text-sm text-gray-600 italic mb-2">
+        🛠 Ready to apply skills in:
+        <ul class="text-sm text-gray-600 italic mb-2">
+          <li>- Designed and deployed NSGs and Azure Firewall rules.</li>
+          <li>- Set up Azure Sentinel for advanced threat detection & incident response.</li>
+        </ul>
+      </p>
+
+      <div class="flex justify-center space-x-4">
+        <a href="https://learn.microsoft.com/api/credentials/share/en-us/MohamadIzzam-3174/ECAF0989FFA37C8E?sharingId=D882A1A827C20213" target="_blank" class="bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow hover:bg-blue-700 hover:text-white transition">
+    🔗 Verify Certification
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Empty Certification Card Template 2 -->
+    <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+      <!-- same structure as above -->
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://learn.microsoft.com/media/learn/certification/badges/microsoft-certified-expert-badge.svg?branch=main" alt="AZ-305 Badge" class="w-20 h-20" />
+        <div>
+          <h3 class="text-xl font-semibold text-blue-700">Microsoft Certified: Azure Solutions Architect Expert</h3>
+          <p class="text-sm text-gray-500">Issued: August 2024 · Expires: August 2026</p>
+        </div>
+      </div>
+
+      <p class="text-gray-700 mb-3 text-sm">
+        Proven ability to design scalable, secure, and cost-effective Azure cloud architectures that align with business goals and technical requirements.
+      </p>
+
+      <ul class="list-disc list-inside text-gray-600 text-sm mb-3">
+        <li>Designing scalable and resilient cloud architectures</li>
+        <li>Planning for high availability and disaster recovery</li>
+        <li>Designing networking, identity, and governance in Azure</li>
+        <li>Integrating on-premises infrastructure with Azure cloud</li>
+      </ul>
+
+      <p class="text-sm text-gray-600 italic mb-2">
+        🛠 Ready to apply skills in: 
+        <ul class="text-sm text-gray-600 italic mb-2">
+          <li>- Designed a multi-region Azure architecture that improved system reliability</li>
+          <li>- Created a secure network and identity framework for a cloud migration project</li>
+        </ul>
+      </p>
+
+      <div class="flex justify-center space-x-4">
+        <a href="https://learn.microsoft.com/api/credentials/share/en-us/MohamadIzzam-3174/8F5D16003AA9B34E?sharingId=D882A1A827C20213" target="_blank" class="bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow hover:bg-blue-700 hover:text-white transition">
+    🔗 Verify Certification
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Empty Certification Card Template 3 -->
+    <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+      <!-- same structure as above -->
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://images.credly.com/size/110x110/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" alt="Certificate Badge" class="w-20 h-20" />
+        <div>
+          <h3 class="text-xl font-semibold text-blue-700">AWS Certified Cloud Practitioner</h3>
+          <p class="text-sm text-gray-500">Issued: Feb 2025 · Expires: Feb 2028</p>
+        </div>
+      </div>
+
+      <p class="text-gray-700 mb-3 text-sm">
+        Strong foundational knowledge of AWS cloud services, enabling effective collaboration and support for cloud initiatives.
+      </p>
+
+      <ul class="list-disc list-inside text-gray-600 text-sm mb-3">
+        <li>Understanding of AWS core services and architecture</li>
+        <li>Basic knowledge of security and compliance in AWS</li>
+        <li>Familiarity with billing, pricing, and support models</li>
+        <li>Ability to assist teams with cloud adoption basics</li>
+      </ul>
+
+      <p class="text-sm text-gray-600 italic mb-2">
+        🛠 Ready to apply skills in:
+        <ul class="text-sm text-gray-600 italic mb-2">
+          <li>- Assisted in planning cloud adoption strategies by explaining AWS services</li>
+          <li>- Supported migration projects by helping troubleshoot basic AWS service issues.</li>
+        </ul>
+      </p>
+
+      <div class="flex justify-center space-x-4">
+        <a href="https://www.credly.com/badges/fa56b7f4-8919-48a9-9679-44eef0aad4ae/public_url" target="_blank" class="bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow hover:bg-blue-700 hover:text-white transition">
+    🔗 Verify Certification
+        </a>
+
+      </div>
+    </div>
+
+
+   
+   
+    <!--
+       
+    <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="your-badge-url.svg" alt="Certificate Badge" class="w-20 h-20" />
+        <div>
+          <h3 class="text-xl font-semibold text-blue-700">[Certificate Title]</h3>
+          <p class="text-sm text-gray-500">Issued: [Month Year] · Expires: [Month Year]</p>
+        </div>
+      </div>
+
+      <p class="text-gray-700 mb-3 text-sm">
+        [Short description of what this certificate covers...]
+      </p>
+
+      <ul class="list-disc list-inside text-gray-600 text-sm mb-3">
+        <li>[Skill or technology 1]</li>
+        <li>[Skill or technology 2]</li>
+        <li>[Skill or technology 3]</li>
+      </ul>
+
+      <p class="text-sm text-gray-600 italic mb-2">
+        🛠 Applied in: <br> [Short example of how you used the skills]
+      </p>
+
+      <div class="flex space-x-4">
+        <a href="[Credly/Verification Link]" target="_blank" class="text-blue-600 text-sm underline hover:text-blue-800">
+          Verify Badge
+        </a>
+        <a href="[Study Notes/Blog Link]" class="text-green-600 text-sm underline hover:text-green-800">
+          Study Notes
+        </a>
+      </div>
+    </div> -->
+
+  </div>
+</section>
+
+  <section class="bg-white py-10 px-5 md:px-20" id="certifications">
+  <h2 class="text-3xl font-bold text-center text-gray-800 mb-10 text-shadow-white">Non-Cloud Credentials</h2>
+
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+     <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://overseas.mofa.go.kr/upload/se2/6217568c-68ed-46f6-946c-6d7e49afb2a9.jpg" alt="Certificate Badge" class="w-20 h-20" />
+        <div>
+          <h3 class="text-xl font-semibold text-blue-700">TOPIK (Test of Proficiency in Korean)</h3>
+          <p class="text-sm text-gray-500">Issued: April 2024 · Expires: May 2026</p>
+        </div>
+      </div>
+
+      <p class="text-gray-700 mb-3 text-sm">
+        An official Korean language proficiency exam for non-native speakers.
+      </p>
+
+      <ul class="list-disc list-inside text-gray-600 text-sm mb-3">
+        <li>Professional Korean reading and writing comprehension</li>
+        <li>Cultural understanding of Korean workplace etiquette</li>
+        <li>Confident verbal communication in formal and casual contexts</li>
+      </ul>
+
+      <p class="text-sm text-gray-600 italic mb-2">
+        🛠 Applied in: <br>- Communicated fluently with Korean users in a technical support role <br>
+        - Bridged cultural gaps when working with Korean clients and colleagues.
+      </p>
+
+      <div class="flex justify-center space-x-4">
+        <a href="/Portfolio Project - Resume webpage/Certification/topik 2024.pdf" target="_blank" class="bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow hover:bg-blue-700 hover:text-white transition">
+          Verify Certification
+        </a>
+      </div>
+    </div> 
+
+     <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Yellow_belt.svg" alt="Lean Six Sigma Yellow badge" class="w-20 h-20" />
+        <div>
+          <h3 class="text-xl font-semibold text-blue-700">Lean Six Sigma Yellow Belt</h3>
+          <p class="text-sm text-gray-500">Issued: March 2O2O · Expires: None</p>
+        </div>
+      </div>
+
+      <p class="text-gray-700 mb-3 text-sm">
+        entry-level certification that demonstrates foundational knowledge focused on improving processes by reducing waste and variation. 
+      </p>
+
+      <ul class="list-disc list-inside text-gray-600 text-sm mb-3">
+        <li>Understands basic Lean Six Sigma concepts and tools</li>
+        <li>Supports process improvement teams with data collection and analysis</li>
+        <li>Helps identify inefficiencies and suggests simple improvements</li>
+      </ul>
+
+      <p class="text-sm text-gray-600 italic mb-2">
+        🛠 Applied in: <br>- Collected and analyzed process data to support root cause analysis.<br>
+        - Participated in cross-functional projects to improve workflow efficiency.
+      </p>
+
+      <div class="flex justify-center space-x-4">
+        <a href="/Portfolio Project - Resume webpage/Certification/Lean Six Sigma.pdf" target="_blank" class="bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow hover:bg-blue-700 hover:text-white transition">
+          Verify Certification
+        </a>
+      </div>
+    </div> 
+
+  </div>
+  </section>
+
+  <div class="bg-gradient-to-r from-blue-400 to-blue-600 text-white text-center py-12 px-6 mt-16 rounded-t-lg shadow-lg max-w-screen-2x2 mx-auto">
+  <p class="text-lg sm:text-xl lg:text-2xl font-semibold mb-10 max-w-xl mx-auto leading-relaxed">
+    Looking for a motivated professional?<br>
+    My resume is ready for your review.
+  </p>
+  <!-- Optional image or illustration -->
+  <div class="mb-10">
+    <img src="Images/footer.PNG" alt="icon" class="mx-auto w-40 sm:w-48 lg:w-60 h-auto">
+  </div> 
+  <a 
+    href="/Portfolio Project - Resume webpage/Certification/Resume Mohamad Izzam 2025.pdf" 
+    download 
+    class="inline-flex items-center justify-center bg-white text-blue-800 font-bold px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-full shadow-lg hover:bg-blue-100 transition duration-300 transform hover:-translate-y-1 text-sm sm:text-base lg:text-lg"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v8m0 0l-4-4m4 4l4-4M12 4v8" />
+    </svg>
+    Download Resume
+  </a>
+</div>
+
+<footer class="bg-gray-100 text-gray-600 text-sm text-center py-4 mt-16 border-t">
+  <p>&copy; 2025 Mohamad Izzam. All rights reserved.</p>
+</footer>
+
+ 
+</body>
+</html>
