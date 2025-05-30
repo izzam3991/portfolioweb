@@ -107,6 +107,11 @@
 
 @media (min-width: 1440px) {
 
+  .slider-background {
+    background-size: cover;
+    background-position: center;
+  }
+
   .slider-wrapper {
     max-width: 50%;
     margin: 0 auto;
