@@ -1,0 +1,194 @@
+header {
+    width: 100vw;
+}
+
+.header-all {
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    justify-content: center;
+    justify-items: center;
+    position: sticky;
+    top: -4.2rem;
+    z-index: 999;
+    height: max-content;
+}
+
+
+
+.header-toprow {
+    display: grid;
+    margin-top: 1rem;
+    gap: 0.5rem;
+
+}
+
+.header-welcoming {
+    color: rgb(0, 0, 0);
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0 0 80PX rgb(0, 17, 253);
+    font-size: 24px;
+    text-align: center;
+    font-weight: 900;
+    white-space: pre-wrap;
+}
+
+.header-contactme {
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.header-background {
+    font-family: 'Playfair Display', serif;
+    background-image: url("../Images/background-forest.jpg");
+    background-size: 100% 100%;
+    height: 8rem;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.header-background h1 {
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    font-weight: 900;
+    text-shadow: 0 0 20px #171818, 0 0 40px #000c11;
+    text-align: center;
+}
+
+.header-background p {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: 0 0 20px #171818, 0 0 40px #000c11;
+    text-align: center;
+}
+
+.header-option {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 2.5rem;
+    position: sticky;
+    top: 7.5rem;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+
+
+}
+
+.header-option nav {
+    width: 100vw;
+
+}
+
+
+.header-option a {
+    text-align: center;
+    width: 33.33vw;
+}
+
+
+
+
+
+@media (min-width: 1440px) {
+    header {
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+    }
+
+    .header-all {
+        top: -2.5rem;
+    }
+
+    .header-toprow {
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        width: 90%;
+    }
+
+    .header-welcoming {
+        color: rgb(0, 0, 0);
+        text-shadow: 0 0 80PX rgb(0, 17, 253);
+        font-size: 28px;
+        text-align: center;
+        font-weight: 800;
+        white-space: pre-wrap;
+        width: 50%;
+        text-align: left;
+
+    }
+
+    .header-contactme {
+        font-size: 16px;
+        text-align: right;
+        width: 50%;
+        margin-bottom: 0.4rem;
+    }
+
+    .header-background {
+        background-size: cover;
+        background-position: center;
+        width: 90%;
+        height: 11rem;
+
+    }
+
+
+    .header-background h1 {
+        font-size: 38px;
+    }
+
+    .header-background p {
+        font-size: 28px;
+    }
+
+    .header-option {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        top: 11rem;
+
+    }
+
+    .header-option-arrow {
+        width: 29%;
+
+        background-image: url("../Images/left-arrow.PNG");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.3;
+    }
+
+    .header-option-arrow2 {
+        width: 29%;
+        background-image: url("../Images/right-arror.PNG");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.3;
+    }
+
+
+    .header-option nav {
+        flex-direction: row;
+    }
+
+
+    .header-option a {
+        width: 33%;
+    }
+
+}
