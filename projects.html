@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="CSS/header.css">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -52,10 +53,20 @@
       <div class="header-toprow">
         <div class="header-welcoming">Welcome to my portfolio website</div>
         <div class="header-contactme">
-          <nav>
-            <a href="#">Contact Me</a>
-            <a style="color: #db1414;" href="#">Language</a>
+          <nav class="gap-4 flex justify-center md:justify-end text-base text-gray-800">
+            <a href="contact.html" class="flex gap-2 hover:text-blue-600 transition">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+              Contact Me
+            </a>
+            <a href="/Certification/Resume Mohamad Izzam 2025.pdf" target="_blank"
+              class="flex gap-2 hover:text-blue-600 transition">
+              <i data-lucide="file-text" class="w-5 h-5"></i>
+              My Resume
+            </a>
           </nav>
+          <script>
+            lucide.createIcons();
+          </script>
         </div>
       </div>
 
@@ -76,8 +87,8 @@
 
     </div>
 
-    <section class="bg-white py-12 px-5 md:px-24" id="azure-static-project">
-      <h2 class="text-3xl md:text-3xl font-bold text-center text-gray-800 mb-10">
+    <section class="bg-red-50 py-12 px-5 md:px-24" id="azure-static-project">
+      <h2 class="text-3xl md:text-3xl font-bold text-center text-red-900 mb-10" style="text-shadow: 0 0 4px rgb(255, 255, 255);">
         🌐 Azure Static Website with CI/CD
       </h2>
 
@@ -87,7 +98,8 @@
           <!-- Left: Description + Buttons -->
           <div class="space-y-6">
             <p class="text-gray-700 text-base leading-relaxed">
-              This project which is this portfolio website <strong>fully static website hosted on Azure Blob Storage</strong> <br>
+              This project which is this portfolio website <strong>fully static website hosted on Azure Blob
+                Storage</strong> <br>
               with <strong>automated deployment via GitHub Actions</strong> and a real-time.
             </p>
 

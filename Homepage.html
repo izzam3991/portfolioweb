@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="CSS/card.css">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
     * {
@@ -68,10 +69,22 @@
       <div class="header-toprow">
         <div class="header-welcoming">Welcome to my portfolio website</div>
         <div class="header-contactme">
-          <nav>
-            <a href="#">Contact Me</a>
-            <a style="color: #db1414;" href="#">Language</a>
+          <nav class="gap-4 flex justify-center md:justify-end text-base text-gray-800">
+            <a href="contact.html" class="flex gap-2 hover:text-blue-600 transition">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+              Contact Me
+            </a>
+            <a href="/Certification/Resume Mohamad Izzam 2025.pdf" target="_blank"
+              class="flex gap-2 hover:text-blue-600 transition">
+              <i data-lucide="file-text" class="w-5 h-5"></i>
+              My Resume
+            </a>
           </nav>
+
+          <script>
+            lucide.createIcons();
+          </script>
+
         </div>
       </div>
 
