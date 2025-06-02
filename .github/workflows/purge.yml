@@ -1,0 +1,27 @@
+name: Deploy and Purge CDN
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Purge Azure CDN
+      run: |
+        az cdn endpoint purge \
+          --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
+          --profile-name ${{ secrets.AZURE_CDN_PROFILE }} \
+          --name ${{ secrets.AZURE_CDN_ENDPOINT }} \
+          --content-paths '/*'
